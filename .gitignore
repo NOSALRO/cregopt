@@ -1,0 +1,7 @@
+build/
+.vscode
+*.mp4
+.ci
+*.csv
+*.xlsx
+out.txt
