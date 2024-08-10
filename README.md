@@ -4,7 +4,9 @@ Official code implementation of the paper entitled `Gait Optimization for Legged
 
 See more at [https://nosalro.github.io/cregopt](https://nosalro.github.io/cregopt).
 
+<p align="center">
 <img src="https://github.com/NOSALRO/cregopt/blob/master/docs/static/images/concept_cregoptv1.png" alt="concept_figure" width="50%"/>
+</p>
 
 ## Maintainers
 
