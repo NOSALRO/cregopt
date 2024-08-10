@@ -1,6 +1,6 @@
 # CrEGOpt: Cross Entropy Gait Optimization For Legged Systems
 
-Official code implementation of the paper entitled `Gait Optimization for Legged Systems Through Mixed Distribution Cross-Entropy Optimization` by Ioannis Tsikelis\* and Konstantinos Chatzilygeroudis\* (\* Equal contribution).
+Official code implementation of the paper entitled *Gait Optimization for Legged Systems Through Mixed Distribution Cross-Entropy Optimization* by Ioannis Tsikelis and Konstantinos Chatzilygeroudis.
 
 See more at [https://nosalro.github.io/cregopt](https://nosalro.github.io/cregopt).
 
