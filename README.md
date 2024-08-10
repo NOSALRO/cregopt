@@ -8,8 +8,8 @@ See more at [https://nosalro.github.io/cregopt](https://nosalro.github.io/cregop
 
 ## Maintainers
 
-- Ioannis Tsikelis (Univ. of Patras) - tsikelis.i@proton.me
-- Konstantinos Chatzilygeroudis (Univ. of Patras) - costashatz@upatras.gr
+- Ioannis Tsikelis (University of Patras) - tsikelis.i@proton.me
+- Konstantinos Chatzilygeroudis (University of Patras) - costashatz@upatras.gr
 
 ## Citing CrEGOpt
 
