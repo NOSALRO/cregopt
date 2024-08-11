@@ -1,0 +1,12 @@
+[submodule ".ci/Ipopt"]
+	path = .ci/Ipopt
+	url = https://github.com/coin-or/Ipopt.git
+[submodule ".ci/ThirdParty-ASL"]
+	path = .ci/ThirdParty-ASL
+	url = https://github.com/coin-or-tools/ThirdParty-ASL.git
+[submodule ".ci/ThirdParty-Mumps"]
+	path = .ci/ThirdParty-Mumps
+	url = https://github.com/coin-or-tools/ThirdParty-Mumps.git
+[submodule ".ci/ThirdParty-HSL"]
+	path = .ci/ThirdParty-HSL
+	url = https://github.com/coin-or-tools/ThirdParty-HSL.git
