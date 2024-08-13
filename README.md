@@ -26,6 +26,54 @@ If you use this code in a scientific publication, please use the following citat
     }
 ```
 
+## Replicating the paper results
+
+Clone this repository.
+
+```shell
+git clone git@github.com:NOSALRO/cregopt.git
+```
+
+The required libraries are added as submodules.
+
+```shell
+cd cregopt/.ci/
+git submodule init
+git submodule update
+```
+
+\*This code uses the HSL_MA97 parallel solver package for IPOPT, which is licensed \(more info [here](https://licences.stfc.ac.uk/product/coin-hsl)\). If you have the .zip file, you should extract its contents in the .ci/coinshl folder.
+
+Build the docker image.
+
+```shell
+docker build -t ipopt .
+```
+
+Start the docker container.
+
+```shell
+cd .. # cd to the project root directory
+docker run --rm -it --net=host -e DISPLAY -v ${HOME}/.Xauthority:/home/robot/.Xauthority -v "$(pwd)":/home/robot/code --entrypoint /bin/bash ipopt
+```
+
+In the docker container build the experiment executables and run the bash script that generates and stores the resutls.
+
+```shell
+cd code/
+mkdir build && cd build
+cmake ..
+make -j
+cd ..# cd to project's root directory
+cd tools/
+
+./run_experiment_1 # Run 1st paper experiment.
+./run_experiment_2 # Run 2nd paper experiment.
+./run_experiment_3 # Run 3rd paper experiment.
+```
+
+The experiment results will be automatically exported in the [project root directory]/tools/results in csv form.
+
 ## Acknowledgments
 
 This work was supported by the [Hellenic Foundation for Research and Innovation](https://www.elidek.gr/en/homepage/) (H.F.R.I.) under the "3rd Call for H.F.R.I. Research Projects to support Post-Doctoral Researchers" (Project Acronym: NOSALRO, Project Number: 7541).
