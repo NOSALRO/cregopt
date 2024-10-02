@@ -10,7 +10,7 @@ See more at [https://nosalro.github.io/cregopt](https://nosalro.github.io/cregop
 
 ## Maintainers
 
-- Ioannis Tsikelis (University of Patras) - tsikelis.i@proton.me
+- Ioannis Tsikelis (University of Patras) - tsikelis.i@protonmail.com
 - Konstantinos Chatzilygeroudis (University of Patras) - costashatz@upatras.gr
 
 ## Citing CrEGOpt
@@ -21,7 +21,7 @@ If you use this code in a scientific publication, please use the following citat
 @inproceedings{tsikelis2024gait,
       title={Gait Optimization for Legged Systems Through Mixed Distribution Cross-Entropy Optimization},
       author={Tsikelis, Ioannis and Chatzilygeroudis, Konstantinos},
-      booktitle={Submitted to IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
+      booktitle={IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
       year={2024}
     }
 ```

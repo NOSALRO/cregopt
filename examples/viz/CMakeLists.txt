@@ -5,7 +5,7 @@
 #|    Copyright (c) 2024 Computational Intelligence Lab, University of Patras, Greece
 #|
 #|    Authors:  Ioannis Tsikelis, Konstantinos Chatzilygeroudis
-#|    emails:    tsikelis.i@proton.me, costashatz@gmail.com
+#|    emails:   tsikelis.i@protonmail.com, costashatz@gmail.com
 #|    website:  https://nosalro.github.io/cregopt
 #|
 #|    This file is part of cregopt.
