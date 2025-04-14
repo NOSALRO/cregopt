@@ -89,8 +89,6 @@ int main()
     }
 
     terrain->SetGrid(grid);
-    std::cout << "Height at (0, 0) and (1, 1): " << terrain->GetHeight(0., 0.) << ", " << terrain->GetHeight(1., 1.) << std::endl;
-    // std::cout << "Height at (5, 0) and (1, 2): " << terrain->GetHeight(0, 0.) << ", " << terrain->GetHeight(4., 1.) << std::endl;
     terrain->ExportToCsv(params::filename);
 
     return 0;

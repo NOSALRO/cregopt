@@ -29,6 +29,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_biped_cem_md" $i
+    "$cwd/../build/tools/save_data_for_viz" "2" "false" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -46,6 +47,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_biped_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "2" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -70,6 +72,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_quad_cem_md" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "false" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -87,6 +90,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_quad_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -111,6 +115,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_hex_cem_md" $i
+    "$cwd/../build/tools/save_data_for_viz" "6" "false" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -128,6 +133,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp2_hex_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "6" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done

@@ -226,3 +226,4 @@ if (TBB_FOUND)
     target_compile_options(exp3_min_force_cregopt PUBLIC -DUSE_TBB -DUSE_TBB_ONEAPI)
 endif()
 
+add_subdirectory(viz)

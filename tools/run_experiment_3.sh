@@ -30,6 +30,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp3_min_stance_cem_md" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "false" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -47,6 +48,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp3_min_stance_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -71,6 +73,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp3_min_force_cem_md" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "false" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -88,6 +91,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp3_min_force_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
