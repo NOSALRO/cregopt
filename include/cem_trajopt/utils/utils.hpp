@@ -93,10 +93,10 @@ namespace cem_trajopt {
         std::string line;
         std::getline(file, line);
 
-        std::stringstream line_stream(line);
-        std::string cell;
-        while (std::getline(line_stream, cell, ',')) {
-            data.push_back(std::stod(cell));
+        std::istringstream line_stream(line);
+        T value;
+        while (line_stream >> value) {
+            data.push_back(value);
         }
 
         file.close();

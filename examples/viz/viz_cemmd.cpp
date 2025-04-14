@@ -84,7 +84,7 @@ namespace params {
     static constexpr unsigned int max_steps = 50; // max steps for algorithm to converge
 
     // Towr parameters
-    static constexpr int ee_polynomials_per_swing_phase = 1;
+    static constexpr int ee_polynomials_per_swing_phase = 2;
     static constexpr double min_phase_duration = 0.08;
     static constexpr double max_phase_duration = 0.36;
     static constexpr double stance_duration = 0.2;

@@ -10,7 +10,7 @@ See more at [https://nosalro.github.io/cregopt](https://nosalro.github.io/cregop
 
 ## Maintainers
 
-- Ioannis Tsikelis (University of Patras) - tsikelis.i@protonmail.com
+- Ioannis Tsikelis (Centre Inria de l'Université de Lorraine) - ioannis.tsikelis@inria.fr
 - Konstantinos Chatzilygeroudis (University of Patras) - costashatz@upatras.gr
 
 ## Citing CrEGOpt
@@ -28,6 +28,8 @@ If you use this code in a scientific publication, please use the following citat
 
 ## Replicating the paper results
 
+### Download code and set up docker
+
 Clone this repository.
 
 ```shell
@@ -42,7 +44,7 @@ git submodule init
 git submodule update
 ```
 
-\*This code uses the HSL_MA97 parallel solver package for IPOPT, which is licensed \(more info [here](https://licences.stfc.ac.uk/product/coin-hsl)\). If you have the .zip file, you should extract its contents in the .ci/coinshl folder.
+\*This code uses the HSL_MA97 parallel solver package for IPOPT, which is licensed \(more info [here](https://licences.stfc.ac.uk/product/coin-hsl)\). If you have the .zip file, you should extract its contents in .ci/coinshl/.
 
 Build the docker image.
 
@@ -57,7 +59,9 @@ cd .. # cd to the project root directory
 docker run --rm -it --net=host -e DISPLAY -v ${HOME}/.Xauthority:/home/robot/.Xauthority -v "$(pwd)":/home/robot/code --entrypoint /bin/bash ipopt
 ```
 
-In the docker container build the experiment executables and run the bash script that generates and stores the resutls.
+### Run the experiments
+
+In the docker container build the experiment executables and run the bash script that generates and stores the results:
 
 ```shell
 cd code/
@@ -72,7 +76,30 @@ cd tools/
 ./run_experiment_3 # Run 3rd paper experiment.
 ```
 
-The experiment results will be automatically exported in the [project root directory]/tools/results in csv form.
+The run_experiment scripts save their results in tools/results/.
+
+For each run there are for files:
+- results.txt : the results of the cregopt loop used for the comparisons (wall time, success and number of iterations)
+- best_discrete.csv : with the best solution of the discrete CEM-MD distribution
+- best_continuous.csv : with the best solution of the continuous CEM-MD distribution
+- trajectory.txt : samples of the generated SRBD trajectory for use in the pyhton visualization script
+
+### Vizualize the results
+
+In the docker container, run the python visualization script with the robot and results file of your choice:
+
+```shell
+cd code/
+cd python/viz/
+python viz.py --robot [biped, quad, hex] --data[path_to_trajectory.txt] --terrain [flat,step]
+```
+
+To see all available options of the visualization script run:
+
+```shell
+python viz.py -h
+```
+
 
 ## Acknowledgments
 

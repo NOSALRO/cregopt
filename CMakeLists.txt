@@ -63,10 +63,10 @@ if (USE_RobotDART)
     find_package(RobotDART QUIET OPTIONAL_COMPONENTS Magnum)
 endif()
 
-################## 
+##################
 # Create library #
 ##################
-add_library(${PROJECT_NAME} 
+add_library(${PROJECT_NAME}
     src/terrain_grid.cpp
     src/gap.cpp
     src/utils.cpp
@@ -85,7 +85,7 @@ if (RobotDART_FOUND AND RobotDART_Magnum_FOUND)
   set_target_properties(RobotDART::Magnum PROPERTIES INTERFACE_COMPILE_OPTIONS "")
 
   target_compile_definitions(${PROJECT_NAME} PUBLIC "-DVIZ=1;SRCPATH=\"${CMAKE_CURRENT_SOURCE_DIR}\"")
-  target_link_libraries(${PROJECT_NAME} PRIVATE 
+  target_link_libraries(${PROJECT_NAME} PRIVATE
     RobotDART::Simu
     RobotDART::Magnum
   )
@@ -118,16 +118,5 @@ target_link_libraries(terrain_grid_test PRIVATE
 # Create tools #
 ################
 
-# Generate terrain csv files
-add_executable(gen_terrain tools/gen_terrain.cpp)
-target_include_directories(gen_terrain PRIVATE ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(gen_terrain PRIVATE
-    ${PROJECT_NAME}
-)
+add_subdirectory(tools)
 
-# Visualise terrain samples
-add_executable(sample_terrain tools/sample_terrain.cpp)
-target_include_directories(sample_terrain PRIVATE ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(sample_terrain PRIVATE
-    ${PROJECT_NAME}
-)

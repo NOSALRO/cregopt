@@ -2,7 +2,7 @@
 
 # Run gen_terrain to generate thw step terrain used on scenario 3 #
 cd ../build/
-./gen_terrain
+./tools/gen_terrain
 cd ../tools/
 
 # Save current directory path
@@ -34,6 +34,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp1_scen1_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -75,6 +76,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp1_scen2_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
@@ -116,6 +118,7 @@ for i in $(seq 1 20); do
     rm -rf *
 
     "$cwd/../build/examples/exp1_scen3_cregopt" $i
+    "$cwd/../build/tools/save_data_for_viz" "4" "true" "./cregopt_best_discrete.csv" "./cregopt_best_continuous.csv"
 
     cd ../
 done
